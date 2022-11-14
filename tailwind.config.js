@@ -34,5 +34,8 @@ module.exports = {
       '2xl': {'min': '1536px'},
       // => @media (min-width: 1536px) { ... }
     },
+    colors: {
+      'dark-blue': '#384564',
+    },
   }
 }

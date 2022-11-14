@@ -1,7 +1,7 @@
 import React from 'react';
 
 type StarProps = {
-    styles: string
+    styles?: string
 }
 function Star(props:StarProps) {
     return (

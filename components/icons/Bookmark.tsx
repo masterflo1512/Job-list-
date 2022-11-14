@@ -1,9 +1,9 @@
 import React from 'react';
 
-type RectProps = {
+type BookmarkProps = {
     styles: string
 }
-function Rectangle(props: RectProps) {
+function Bookmark(props: BookmarkProps) {
     return (
         <div>
             <svg className={props.styles} xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
@@ -13,5 +13,5 @@ function Rectangle(props: RectProps) {
     );
 }
 
-export default Rectangle;
+export default Bookmark;
 

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import {useState, useEffect } from 'react'
 import JobItem from '../components/JobItem'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
