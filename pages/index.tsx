@@ -11,11 +11,12 @@ export default function Home() {
       <Head>
         <title>Jobs</title>
       </Head>
-      <JobItem 
+      {/* <JobItem 
+        image=""
         title="Arbeitsmediziner/-in/Betriebsmediziner/-in(m/w/d) oder einen Arzt/eine Arztin(m/w/d)fur die Weiterbildung zum Facharzt/zur Facharztin fur Arbeitsnedizin(m/w/d)" 
         description="Department name. Allgemeines krankenhaus der Stadt Wien-AKH " 
         address="Vienna, Austria"
-      />
+      /> */}
     </div>
   )
 }

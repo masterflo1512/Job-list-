@@ -2,18 +2,22 @@ import React from "react";
 import Star from "./icons/Star";
 import Bookmark from "./icons/Bookmark";
 import Location from "./icons/Location";
+import Link from 'next/link'
 
 type JobItemProps = {
     title: string;
     description: string;
     address: string;
+    image: string
+    id:string
 };
-function JobItem(props: JobItemProps) {
+function JobItem({title,description,address,image,id}: JobItemProps) {
     return (
-        <div className="flex flex-row my-5 mx-5 bg-white rounded shadow-md p-5">
+        <Link href={`/jobs/${id}`}>
+            <div className="flex flex-row my-5 mx-5 bg-white rounded shadow-md p-5">
             <div className="mt-5 shrink-0">
                 <img
-                    src="https://i.picsum.photos/id/849/200/300.jpg?hmac=yxC3iWchW02fPkymErlcM6lg2lcTCKGxXh49nblSx9I"
+                    src={image}
                     alt="..."
                     className="h-20 w-20 rounded-full"
                 />
@@ -22,14 +26,14 @@ function JobItem(props: JobItemProps) {
                 <div className="flex flex-row">
                     <div>
                         <h2 className="font-semibold text-[#3A4562] text-xl">
-                            {props.title}
+                            {title}
                         </h2>
                         <h4 className="font-light text-[#878D9D] text-sm mt-5 mb-5">
-                            {props.description}
+                            {description}
                         </h4>
                         <div className="flex flex-row gap-2 font-light text-[#878D9D] text-sm">
                             <Location styles="" />
-                            <span className="">{props.address}</span>
+                            <span className="">{address}</span>
                         </div>
                     </div>
                 </div>
@@ -50,6 +54,8 @@ function JobItem(props: JobItemProps) {
                 </div>
             </div>
         </div>
+        </Link>
+        
     );
 }
 

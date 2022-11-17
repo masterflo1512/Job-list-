@@ -36,6 +36,16 @@ module.exports = {
     },
     colors: {
       'dark-blue': '#384564',
+      'white' : '#ffffff',
+      'btn-secondary':'rgba(161, 177, 219, 0.317343)',
+      'text-btn-secondary': '#55699E',
+      'btn-tertiary': 'rgba(255, 207, 0, 0.15)',
+      'text-btn-tertiary':'#988B49',
+      'save-icon': '#3A4562',
+      'posted': 'rgba(56, 65, 93, 0.355988)'
     },
+    fontFamily: {
+      'sans': ['Robot', 'sans-serif'],
+    }
   }
 }

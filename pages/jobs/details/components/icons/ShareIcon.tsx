@@ -1,9 +1,9 @@
 import React from 'react';
 
-type ShapeProps = {
+type ShareIconProps = {
     styles?: string
 }
-function Shape(props:ShapeProps) {
+function ShareIcon(props:ShareIconProps) {
     return (
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
@@ -13,4 +13,4 @@ function Shape(props:ShapeProps) {
     );
 }
 
-export default Shape;
+export default ShareIcon;
