@@ -30,7 +30,7 @@ function Main(props: MainProps) {
         <h2 className="font-bold  text-2xl">Compensation & Benefits:</h2>
         {props.listOfBenefits}
         <ul>
-            {props.listOfBenefits.map(benefit => <li className="flex items-center -mx-12"><Bullet styles="mx-5" />{benefit}</li>)}
+            {props.listOfBenefits?.map((benefit,index) => <li key={index} className="flex items-center -mx-12"><Bullet styles="mx-5" />{benefit}</li>)}
         </ul>
       </div>
       <Button variant={"primary"} styles="">
