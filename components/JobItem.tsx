@@ -4,7 +4,7 @@ import Bookmark from "./icons/Bookmark";
 import Location from "./icons/Location";
 import Link from 'next/link'
 
-type JobItemProps = {
+export type JobItemProps = {
     title: string;
     description: string;
     address: string;
@@ -12,9 +12,10 @@ type JobItemProps = {
     id:string
 };
 function JobItem({title,description,address,image,id}: JobItemProps) {
+    console.log(image);
+    
     return (
-        <Link href={`/jobs/${id}`}>
-            <div className="flex flex-row my-5 mx-5 bg-white rounded shadow-md p-5">
+        <div className="flex flex-row my-5 mx-5 bg-white rounded shadow-md p-5">
             <div className="mt-5 shrink-0">
                 <img
                     src={image}
@@ -25,9 +26,11 @@ function JobItem({title,description,address,image,id}: JobItemProps) {
             <div className="p-5 flex w-full sm:flex-col-reverse">
                 <div className="flex flex-row">
                     <div>
-                        <h2 className="font-semibold text-[#3A4562] text-xl">
-                            {title}
-                        </h2>
+                        <Link href={`/jobs/${id}`}>
+                            <h2 className="font-semibold text-[#3A4562] text-xl">
+                                {title}
+                            </h2>
+                        </Link>
                         <h4 className="font-light text-[#878D9D] text-sm mt-5 mb-5">
                             {description}
                         </h4>
@@ -54,8 +57,6 @@ function JobItem({title,description,address,image,id}: JobItemProps) {
                 </div>
             </div>
         </div>
-        </Link>
-        
     );
 }
 

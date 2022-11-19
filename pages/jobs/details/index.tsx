@@ -18,7 +18,7 @@ function JobDetails() {
                     about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique voluptas numquam. Doloribus, numquam culpa nulla deserunt velit obcaecati magni ut eos ipsa. Nam quam quae incidunt blanditiis eum repudiandae.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique voluptas numquam. Doloribus, numquam culpa nulla deserunt velit obcaecati magni ut eos ipsa. Nam quam quae incidunt blanditiis eum repudiandae.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique voluptas numquam. Doloribus, numquam culpa nulla deserunt velit obcaecati magni ut eos ipsa. Nam quam quae incidunt blanditiis eum repudiandae."
-                    CompensationTitle="Compensation & Benefits:"
+                    compensationTitle="Compensation & Benefits:"
                     listOfBenefits="Our physicians enjoya wide range of benefits,including:
                     Very competitive compensation package with bbbbonuses
                     Medical, Dental, and Vision Insurance
