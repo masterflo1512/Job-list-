@@ -26,6 +26,7 @@ function JobList({ jobItems }:JobListProps) {
           )}`}
           description={jobItem.description}
           address={jobItem.address}
+          createdAt={jobItem.createdAt}
         />
       ))}
     </>

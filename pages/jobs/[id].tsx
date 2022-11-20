@@ -5,7 +5,7 @@ import Map from "./details/components/Map";
 import Footer from "./details/components/Footer";
 import { useRouter } from "next/router";
 import { JobItemProps } from "../../components/JobItem";
-import parseDescription from '../../utils/parse-description'
+import parseDescription from "../../utils/parse-description";
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -15,18 +15,38 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { jobItems } };
 }
-type JobDetailsProps = {
-  jobItems: Array<JobItemProps & { id: string; salary: string }>;
+
+type Location = {
+  lat: number;
+  long: number;
+};
+export type JobDetailsProps = {
+  jobItems: Array<
+    JobItemProps & {
+      id: string;
+      salary: string;
+      location: Location;
+      name: string;
+      address: string;
+      phone: string;
+      email: string;
+      pictures: Array<string>;
+      employment_type:Array<string>;
+      benefits:Array<string>
+    }
+  >;
 };
 function JobDetails({ jobItems }: JobDetailsProps) {
   const router = useRouter();
   const jobItem = jobItems.find((jobItem) => jobItem.id === router.query.id);
 
   if (jobItem) {
-    const { description, benefits, responsibilities } = parseDescription(jobItem.description)
+    const { description, benefits, responsibilities } = parseDescription(
+      jobItem.description
+    );
     return (
-      <div className="flex justify-center">
-        <div className="flex flex-col max-w-[66%] divide-y divide-solid">
+      <div className="flex justify-center sm:flex-col ">
+        <div className="flex flex-col max-w-[60%] divide-y divide-solid">
           <Header title="Job Details" />
           <Main
             title={jobItem.title}
@@ -34,15 +54,21 @@ function JobDetails({ jobItems }: JobDetailsProps) {
             jobDescription={description}
             responsibilities={responsibilities}
             listOfBenefits={benefits}
+            employmentTypes={jobItem.employment_type}
+            benefits={jobItem.benefits}
+            createdAt={jobItem.createdAt}
           />
-          <Footer
-            image={
-              "https://i.picsum.photos/id/849/200/300.jpg?hmac=yxC3iWchW02fPkymErlcM6lg2lcTCKGxXh49nblSx9I"
-            }
-          />
+          <Footer images={jobItem.pictures} />
         </div>
         <div>
-          <Map styles="min-w-[50%]" />
+          <Map
+            lat={jobItem.location.lat}
+            long={jobItem.location.long}
+            name={jobItem.name}
+            address={jobItem.address}
+            phone={jobItem.phone}
+            email={jobItem.email}
+          />
         </div>
       </div>
     );

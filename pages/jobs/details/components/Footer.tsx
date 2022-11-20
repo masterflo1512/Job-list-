@@ -1,19 +1,27 @@
-import React from 'react';
+import React from "react";
 
-type FooterProps ={
-    image:string
-}
-function Footer(props:FooterProps) {
-    return (
-        <div>
-           <h1>Attached images</h1>
-           <div className='flex gap-5'>
-            <img src={props.image} alt="" className='rounded-md'/>
-            <img src={props.image} alt="" className='rounded-md'/>
-            <img src={props.image} alt="" className='rounded-md'/>
-           </div>
-        </div>
-    );
+type ImagesProps = {
+  images: Array<string>;
+};
+function Footer(props: ImagesProps) {
+  const { images } = props;
+
+  return (
+    <div>
+      <h1 className="font-bold text-2xl text-save-icon">Attached images</h1>
+      <div className="flex gap-5 pb-24">
+        {images.map((image, i) => (
+          <img
+            src={`${props.images[i]}?random=${Math.floor(
+              Math.random() * 1000
+            )}`}
+            alt=""
+            className="rounded-md w-64 h-40"
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Footer;

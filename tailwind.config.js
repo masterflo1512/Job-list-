@@ -42,7 +42,8 @@ module.exports = {
       'btn-tertiary': 'rgba(255, 207, 0, 0.15)',
       'text-btn-tertiary':'#988B49',
       'save-icon': '#3A4562',
-      'posted': 'rgba(56, 65, 93, 0.355988)'
+      'posted': 'rgba(56, 65, 93, 0.355988)',
+      'bg-map': '#2A3047'
     },
     fontFamily: {
       'sans': ['Robot', 'sans-serif'],
