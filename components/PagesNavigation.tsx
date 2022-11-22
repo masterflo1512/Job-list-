@@ -24,21 +24,21 @@ function PagesNavigation(props:PagesNavigationProps) {
           } else {
             list.push(i);
           }
-        } return list.map((item, i) => (<h4 key={i} className={styles.navigation_number}>{item}</h4>));
+        } return list.map((item, i) => (<h4 key={i}>{item}</h4>));
   
       } else {
         for (let i = 1; i <= quantityPages; i++) {
           list.push(i);
         }
-      } return list.map((item, i) => (<h4 key={i} className={styles.navigation_number}>{item}</h4>));
+      } return list.map((item, i) => (<h4 key={i}>{item}</h4>));
   
     }
     return (
-      <div className={styles.navigation_wrapper}>
+      <div >
         <div className='flex items-center'>
           <Return />
         </div>
-        <div className={styles.navigation_numbers}>
+        <div>
           {SplitLength()}
         </div>
         <div className='flex items-center'>
