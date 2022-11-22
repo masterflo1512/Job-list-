@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react'
 import Star from "./icons/Star";
 import Bookmark from "./icons/Bookmark";
 import Location from "./icons/Location";
 import Link from "next/link";
 import calculateTimeAgo from "../utils/calculate-time-ago";
+import { useEffect } from "react";
 
 export type JobItemProps = {
   title: string;
-  description: string;
+  name: string;
   address: string;
   image: string;
   id: string;
@@ -15,11 +16,12 @@ export type JobItemProps = {
 };
 function JobItem({
   title,
-  description,
+  name,
   address,
   image,
   id,
   createdAt,
+
 }: JobItemProps) {
   console.log(image);
 
@@ -35,10 +37,10 @@ function JobItem({
               <h2 className="font-semibold text-[#3A4562] text-xl">{title}</h2>
             </Link>
             <h4 className="font-light text-[#878D9D] text-sm mt-5 mb-5">
-              {description}
+              Department name. {name}
             </h4>
             <div className="flex flex-row gap-2 font-light text-[#878D9D] text-sm">
-              <Location styles="" />
+              <Location />
               <span className="">{address}</span>
             </div>
           </div>

@@ -31,8 +31,9 @@ export type JobDetailsProps = {
       phone: string;
       email: string;
       pictures: Array<string>;
-      employment_type:Array<string>;
-      benefits:Array<string>
+      employment_type: Array<string>;
+      benefits: Array<string>;
+      description:string;
     }
   >;
 };

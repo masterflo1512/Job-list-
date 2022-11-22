@@ -11,7 +11,7 @@ export async function getServerSideProps() {
   return { props: { jobItems } };
 }
 type JobListProps={
-    jobItems: Array<JobItemProps & {pictures: Array<string>}>
+    jobItems: Array<JobItemProps & {pictures: Array<string>}>;
 }
 function JobList({ jobItems }:JobListProps) {
   return (
@@ -24,7 +24,7 @@ function JobList({ jobItems }:JobListProps) {
           image={`${jobItem.pictures[0]}?random=${Math.floor(
             Math.random() * 1000
           )}`}
-          description={jobItem.description}
+          name={jobItem.name}
           address={jobItem.address}
           createdAt={jobItem.createdAt}
         />
