@@ -4,7 +4,7 @@ import Bookmark from "./icons/Bookmark";
 import Location from "./icons/Location";
 import Link from "next/link";
 import calculateTimeAgo from "../utils/calculate-time-ago";
-import { useEffect } from "react";
+
 
 export type JobItemProps = {
   title: string;
