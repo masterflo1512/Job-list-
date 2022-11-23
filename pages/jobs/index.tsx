@@ -1,5 +1,4 @@
 import React from "react";
-import { GetServerSideProps } from "next";
 import JobItem, {JobItemProps} from "../../components/JobItem";
 
 export async function getServerSideProps() {

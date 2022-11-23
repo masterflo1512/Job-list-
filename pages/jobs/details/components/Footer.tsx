@@ -6,7 +6,7 @@ type ImagesProps = {
   images: Array<string>;
 };
 function Footer(props: ImagesProps) {
-  const { images } = props;
+  const { images = [] } = props;
 
   return (
     <div>
